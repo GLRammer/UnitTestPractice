@@ -48,6 +48,8 @@ TEST(PasswordTest, upper_caser){
 TEST(PasswordTest, mixed_case_leading){
 	Password myPassword;
 	int actual = myPassword.count_leading_characters("RrrRrRrR");
+	bool actualB=myPassword.has_mixed_case("RrrRrRrR");
+	EXPECT_EQ(true,actualB);
 	ASSERT_EQ(1,actual);
 }
 
