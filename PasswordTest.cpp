@@ -62,3 +62,11 @@ TEST(PasswordTest, three_of_five_leading){
 	int actual = myPassword.count_leading_characters("lllfm");
 	ASSERT_EQ(3,actual);
 }
+
+TEST(PasswordTest, empty_pass){
+	Password myPassword;
+	int actual = myPassword.count_leading_characters("");
+	bool actualB = myPassword.has_mixed_case("");
+	EXPECT_EQ(0,actual);
+	ASSERT_EQ(false,actualB);
+}
